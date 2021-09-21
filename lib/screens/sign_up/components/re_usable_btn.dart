@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ReUsableButton extends StatelessWidget {
-  ReUsableButton({this.onPress});
+  ReUsableButton({this.onPress,required this.margin,required this.title});
   final dynamic onPress;
+  final EdgeInsetsGeometry margin;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
       height: 50,
-      margin: EdgeInsets.all(50),
+      margin: margin,
       child: OutlinedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
@@ -17,7 +19,7 @@ class ReUsableButton extends StatelessWidget {
         ),
         onPressed: onPress,
         child: Text(
-          "Next",
+          title,
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),

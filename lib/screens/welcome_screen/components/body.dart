@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lab_ui_design/screens/log_in/log_in.dart';
 import 'package:lab_ui_design/screens/sign_up/sign_up.dart';
 import 'package:lab_ui_design/screens/welcome_screen/components/slider_and_model/slider_dot.dart';
 import 'package:lab_ui_design/screens/welcome_screen//components/slider_and_model/slider_item.dart';
@@ -162,7 +163,9 @@ class _BodyState extends State<Body> {
                           children: [
                             Text("Already have an Account?"),
                             TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, LogIn.scr);
+                              },
                               child: Text(
                                 "Login",
                                 style: TextStyle(color: Colors.red),
